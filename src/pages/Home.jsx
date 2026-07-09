@@ -59,12 +59,9 @@ export default function Home() {
       {/* ALBUM FEATURE */}
       <section className="border-y-2 border-bone bg-panel">
         <div className="mx-auto max-w-7xl px-4 md:px-8 py-20 grid gap-10 md:grid-cols-[1fr_1.2fr] items-center">
-          <div className="relative aspect-square hard-border overflow-hidden bg-ink grid place-items-center">
-            <div className="text-center p-8">
-              <span className="font-mono text-xs uppercase tracking-[0.3em] text-olive">{BAND.album.year}</span>
-              <h3 className="display-title text-5xl md:text-6xl mt-2">{BAND.album.title}</h3>
-            </div>
-          </div>
+           <div className="relative aspect-square hard-border overflow-hidden bg-ink">
+             <img src="/Cover Maxi-Single.jpg" alt={BAND.album.title} className="w-full h-full object-cover" />
+           </div>
           <div>
             <SectionHeading kicker="New Album" title="Now Streaming" />
             <ul className="mt-6 divide-y divide-bone/15 border-y border-bone/15">

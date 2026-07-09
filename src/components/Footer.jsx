@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="bg-ink border-t-2 border-bone">
         <div className="mx-auto max-w-7xl px-4 md:px-8 py-14 grid gap-10 md:grid-cols-3">
           <div>
-            <img src="/LOGO.png" alt="SSR SUPREMACY" className="h-20 w-auto mb-4 bg-bone p-2 border-2 border-bone" />
+            <img src="/LOGO.png" alt="SSR SUPREMACY" className="h-24 w-auto mb-4" />
             <p className="font-mono text-sm text-bone/70 leading-relaxed">
               {BAND.genre}
               <br />

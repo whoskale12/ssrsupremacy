@@ -39,9 +39,6 @@ export default function Profile() {
             <MemberCard key={m.id} member={m} />
           ))}
         </div>
-        <p className="font-mono text-xs text-bone/40 mt-6">
-          * Member names &amp; bios are placeholders — real profiles coming soon.
-        </p>
       </section>
     </div>
   )

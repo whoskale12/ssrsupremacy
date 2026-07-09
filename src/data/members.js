@@ -24,9 +24,9 @@ export const MEMBERS = [
   },
   {
     id: 4,
-    name: 'Member Four',
+    name: 'Kale',
     role: 'Bass',
-    img: '/placeholders/member-4.svg',
+    img: '/bass.webp',
     bio: 'Low-end backbone. Holds the whole thing together when it should fall apart.',
   },
   {

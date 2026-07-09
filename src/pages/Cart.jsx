@@ -27,7 +27,7 @@ export default function Cart() {
   })
 
    const whatsappUrl = useMemo(() => {
-     const phoneNumber = '628571163102'
+     const phoneNumber = '6285711631027'
      const message = encodeURIComponent(makeWhatsappMessage(cartItems, buyer))
      return `https://wa.me/${phoneNumber}?text=${message}`
    }, [cartItems, buyer])

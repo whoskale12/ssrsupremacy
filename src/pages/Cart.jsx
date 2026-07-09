@@ -26,11 +26,11 @@ export default function Cart() {
     notes: '',
   })
 
-  const whatsappUrl = useMemo(() => {
-    const phoneNumber = '6281234567890'
-    const message = encodeURIComponent(makeWhatsappMessage(cartItems, buyer))
-    return `https://wa.me/${phoneNumber}?text=${message}`
-  }, [cartItems, buyer])
+   const whatsappUrl = useMemo(() => {
+     const phoneNumber = '628571163102'
+     const message = encodeURIComponent(makeWhatsappMessage(cartItems, buyer))
+     return `https://wa.me/${phoneNumber}?text=${message}`
+   }, [cartItems, buyer])
 
   function handleChange(event) {
     const { name, value } = event.target
@@ -43,10 +43,9 @@ export default function Cart() {
         <div className="mb-10">
           <p className="font-mono text-blood uppercase tracking-[0.3em] text-xs mb-3">Checkout</p>
           <h1 className="font-heavy uppercase text-4xl md:text-6xl leading-none">Your Cart</h1>
-          <p className="text-bone/70 mt-4 max-w-2xl">
-            Review pesanan kamu, isi data pemesan, lalu checkout via WhatsApp. Nomor WhatsApp masih dummy dan bisa
-            diganti nanti.
-          </p>
+           <p className="text-bone/70 mt-4 max-w-2xl">
+             Review pesanan kamu, isi data pemesan, lalu checkout via WhatsApp.
+           </p>
         </div>
 
         {cartItems.length === 0 ? (
@@ -174,10 +173,9 @@ export default function Cart() {
                 Checkout via WhatsApp
               </a>
 
-              <p className="font-mono text-xs text-bone/50 mt-4 leading-relaxed">
-                Setelah klik checkout, pesanan akan dikirim ke WhatsApp admin. Ganti nomor dummy di file
-                `src/pages/Cart.jsx` nanti.
-              </p>
+               <p className="font-mono text-xs text-bone/50 mt-4 leading-relaxed">
+                 Setelah klik checkout, pesanan akan dikirim ke WhatsApp admin.
+               </p>
             </aside>
           </div>
         )}

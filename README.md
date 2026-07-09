@@ -98,9 +98,12 @@ Website is live with the following features complete:
 - ✅ Home page with hero/album sections
 - ✅ Profile page with band info
 - ✅ Music page with album cover and Bandcamp embed
-- ✅ Store page with 3 merchandise items (all marked sold out)
+- ✅ Store page with 3 merchandise items
+- ✅ Shopping cart with merchandise management
+- ✅ WhatsApp checkout integration with order form
 - ✅ Responsive design with dark gritty aesthetic
 - ✅ Social links (Instagram, Bandcamp, YouTube)
+- ✅ Key Chain available for order
 
 See [`memories.md`](./memories.md) for detailed progress notes and development history.
 

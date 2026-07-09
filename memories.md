@@ -12,37 +12,43 @@ Album: "Now I See You, Now I Don't" (2026)
 - [x] Project initialization with Vite + React
 - [x] Tailwind CSS styling setup
 - [x] React Router navigation structure
-  - Home page
-  - Profile page
-  - Music page
-  - Store page
-  - Merch detail page
-  - Cart page
-  - 404 Not Found page
+   - Home page
+   - Profile page
+   - Music page
+   - Store page
+   - Merch detail page
+   - Cart page
+   - 404 Not Found page
 - [x] Component structure established
-  - Navbar with navigation
-  - Footer with transparent logo
-  - GrainOverlay (texture effect)
-  - MerchCard, MemberCard components
-  - PageHeader, SectionHeading components
-  - Icons (Instagram, Bandcamp, YouTube)
-  - Marquee component
+   - Navbar with navigation
+   - Footer with transparent logo
+   - GrainOverlay (texture effect)
+   - MerchCard, MemberCard components
+   - PageHeader, SectionHeading components
+   - Icons (Instagram, Bandcamp, YouTube)
+   - Marquee component
 - [x] Git repository initialization
 - [x] Pushed project to GitHub: https://github.com/whoskale12/ssrsupremacy.git
 - [x] Added real band/brand assets
-  - Transparent `LOGO.png`
-  - Band photos
-  - Album cover: `Cover Maxi-Single.jpg`
-  - T-Shirt image: `kaosputih.png`
-  - Key Chain image: `keychain.png`
+   - Transparent `LOGO.png`
+   - Band photos
+   - Album cover: `Cover Maxi-Single.jpg`
+   - T-Shirt image: `kaosputih.png`
+   - Key Chain image: `keychain.png`
 - [x] Music page updated with album cover and Bandcamp link
 - [x] Spotify references removed from the site
 - [x] Store merchandise reduced to 3 products:
-  - "Now I see you, Now i don't T-Shirt"
-  - Key Chain
-  - Cassette Tape
+   - "Now I see you, Now i don't T-Shirt"
+   - Key Chain
+   - Cassette Tape
 - [x] All merch products marked as sold out
 - [x] Contact email updated to `ssrsupremacy@gmail.com`
+- [x] WhatsApp checkout integration completed
+   - Real WhatsApp number: +62 857-1163-1027
+   - Removed dummy WhatsApp number text
+   - Order form with buyer details (name, phone, address, notes)
+   - Cart management (add, remove, update quantity)
+- [x] Key Chain status updated to available (soldOut: false)
 
 ### 🚧 In Progress / TODO
 - [ ] Add final Cassette Tape product photo when asset is ready

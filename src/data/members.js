@@ -3,9 +3,9 @@
 export const MEMBERS = [
   {
     id: 1,
-    name: 'Member One',
+    name: 'Jay',
     role: 'Vocals',
-    img: '/placeholders/member-1.svg',
+    img: '/placeholders/vokal.jpeg',
     bio: 'Frontman and primary lyricist. Turns heartbreak into hooks you can scream back.',
   },
   {
@@ -17,9 +17,9 @@ export const MEMBERS = [
   },
   {
     id: 3,
-    name: 'Member Three',
+    name: 'Ari',
     role: 'Guitar',
-    img: '/placeholders/member-3.svg',
+    img: '/placeholders/guitar2.jpeg',
     bio: 'Rhythm engine and texture. Lives in the reverb tank.',
   },
   {
@@ -31,9 +31,9 @@ export const MEMBERS = [
   },
   {
     id: 5,
-    name: 'Member Five',
+    name: 'ari',
     role: 'Drums',
-    img: '/placeholders/member-5.svg',
+    img: '/placeholders/drum.jpeg',
     bio: 'Fast hands, faster fills. The reason the pit never stops.',
   },
 ]

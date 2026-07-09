@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink text-bone font-body antialiased;
+    background-image: radial-gradient(circle at 50% 0%, #16160f 0%, #0a0a0a 60%);
+  }
+  ::selection {
+    @apply bg-blood text-bone;
+  }
+  /* Punk scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-ink;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-olive;
+    border: 2px solid #0a0a0a;
+  }
+}
+
+@layer components {
+  .display-title {
+    @apply font-display uppercase leading-[0.9] tracking-tight;
+  }
+  .hard-border {
+    @apply border-2 border-bone;
+  }
+  /* Gritty black & white photo treatment */
+  .photo-bw {
+    filter: grayscale(1) contrast(1.25) brightness(0.85);
+    transition: filter 0.4s ease;
+  }
+  .photo-bw:hover {
+    filter: grayscale(0) contrast(1.05) brightness(1);
+  }
+  .link-glitch {
+    @apply relative inline-block transition-colors;
+  }
+  .link-glitch:hover {
+    @apply text-blood;
+    animation: glitch 0.3s steps(2) infinite;
+  }
+  /* Film grain overlay */
+  .grain-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    background-image: url('/grain.svg');
+    background-size: 200px 200px;
+    opacity: 0.08;
+    mix-blend-mode: overlay;
+  }
+  .btn-punk {
+    @apply inline-block bg-blood text-bone font-heavy uppercase text-sm tracking-widest px-6 py-3 border-2 border-blood transition-all;
+  }
+  .btn-punk:hover {
+    @apply bg-transparent text-blood;
+  }
+  .btn-ghost {
+    @apply inline-block bg-transparent text-bone font-heavy uppercase text-sm tracking-widest px-6 py-3 border-2 border-bone transition-all;
+  }
+  .btn-ghost:hover {
+    @apply bg-bone text-ink;
+  }
+}

@@ -2,9 +2,11 @@ import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { NAV, LINKS } from '../data/site.js'
 import { InstagramIcon, BandcampIcon, MenuIcon, CloseIcon } from './Icons.jsx'
+import { useCart } from '../context/CartContext.jsx'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const { totals } = useCart()
 
   const linkClass = ({ isActive }) =>
     `font-heavy uppercase text-sm tracking-widest px-1 transition-colors ${
@@ -33,7 +35,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Socials + mobile toggle */}
+        {/* Socials + Cart + mobile toggle */}
         <div className="flex items-center gap-4">
           <a href={LINKS.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-blood transition-colors">
             <InstagramIcon />
@@ -41,6 +43,18 @@ export default function Navbar() {
           <a href={LINKS.bandcamp} target="_blank" rel="noreferrer" aria-label="Bandcamp" className="hover:text-blood transition-colors">
             <BandcampIcon />
           </a>
+          <Link
+            to="/cart"
+            className="relative font-heavy uppercase text-sm tracking-widest text-bone hover:text-blood transition-colors"
+            onClick={() => setOpen(false)}
+          >
+            🛒
+            {totals.count > 0 && (
+              <span className="absolute -top-1 -right-2 bg-blood text-ink w-5 h-5 flex items-center justify-center text-xs font-heavy rounded-full">
+                {totals.count}
+              </span>
+            )}
+          </Link>
           <button
             className="lg:hidden"
             onClick={() => setOpen((v) => !v)}

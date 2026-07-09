@@ -7,6 +7,8 @@ import Home from './pages/Home.jsx'
 import Profile from './pages/Profile.jsx'
 import Music from './pages/Music.jsx'
 import Store from './pages/Store.jsx'
+import MerchDetail from './pages/MerchDetail.jsx'
+import Cart from './pages/Cart.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 function ScrollToTop() {
@@ -29,6 +31,8 @@ export default function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/music" element={<Music />} />
           <Route path="/store" element={<Store />} />
+          <Route path="/store/:id" element={<MerchDetail />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

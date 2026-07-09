@@ -1,6 +1,11 @@
+import { Link } from 'react-router-dom'
+
 export default function MerchCard({ item }) {
   return (
-    <div className="group hard-border bg-panel overflow-hidden flex flex-col">
+    <Link
+      to={`/store/${item.id}`}
+      className="group hard-border bg-panel overflow-hidden flex flex-col hover:no-underline transition-colors"
+    >
       <div className="relative aspect-square overflow-hidden bg-ink">
         <img
           src={item.img}
@@ -21,17 +26,16 @@ export default function MerchCard({ item }) {
           <h3 className="font-heavy uppercase text-lg leading-tight">{item.name}</h3>
           <p className="font-mono text-sm text-olive mt-1">{item.price}</p>
         </div>
-        <button
-          disabled={item.soldOut}
-          className={`w-full font-heavy uppercase text-xs tracking-widest px-4 py-3 border-2 transition-all ${
+        <div
+          className={`w-full font-heavy uppercase text-xs tracking-widest px-4 py-3 border-2 transition-all text-center ${
             item.soldOut
-              ? 'border-bone/30 text-bone/30 cursor-not-allowed'
-              : 'border-blood bg-blood text-bone hover:bg-transparent hover:text-blood'
+              ? 'border-bone/30 text-bone/30'
+              : 'border-blood bg-blood text-bone group-hover:bg-transparent group-hover:text-blood'
           }`}
         >
-          {item.soldOut ? 'Unavailable' : 'Add to Cart'}
-        </button>
+          {item.soldOut ? 'Unavailable' : 'View Details'}
+        </div>
       </div>
-    </div>
+    </Link>
   )
 }

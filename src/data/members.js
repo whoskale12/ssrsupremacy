@@ -10,9 +10,9 @@ export const MEMBERS = [
   },
   {
     id: 2,
-    name: 'Member Two',
+    name: 'Samil',
     role: 'Guitar',
-    img: '/placeholders/member-2.svg',
+    img: '/placeholders/guitar1.jpeg',
     bio: 'Bright, ringing leads and the occasional wall of distortion. Riff architect.',
   },
   {

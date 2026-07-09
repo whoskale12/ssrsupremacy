@@ -9,8 +9,8 @@ The site is built with React, Vite, Tailwind CSS, and React Router.
 - Responsive band website
 - Home page with hero/intro sections
 - Profile page for band information
-- Music page with Bandcamp album embed
-- Store page with merch cards
+- Music page with album cover and Bandcamp link
+- Store page with merchandise (3 products: T-Shirt, Key Chain, Cassette Tape)
 - Custom dark gritty visual style
 - Reusable component structure
 - Static data configuration for band info, members, merch, and links
@@ -93,13 +93,16 @@ Update site content from these files:
 
 ## Current Status
 
-The website structure and visual layout are already built.
+Website is live with the following features complete:
 
-Current pending feature:
+- ✅ Home page with hero/album sections
+- ✅ Profile page with band info
+- ✅ Music page with album cover and Bandcamp embed
+- ✅ Store page with 3 merchandise items (all marked sold out)
+- ✅ Responsive design with dark gritty aesthetic
+- ✅ Social links (Instagram, Bandcamp, YouTube)
 
-- Add-to-cart/order functionality for the Store page.
-
-See [`memories.md`](./memories.md) for detailed progress notes.
+See [`memories.md`](./memories.md) for detailed progress notes and development history.
 
 ## Repository
 
@@ -110,9 +113,8 @@ https://github.com/whoskale12/ssrsupremacy.git
 ## Notes
 
 - `node_modules/` and `dist/` are intentionally ignored by Git.
-- Store checkout is not live yet.
-- Current merch images use placeholder SVG files.
-- Real band images are available in the project and can be wired into the site as needed.
+- All merchandise items are currently marked as sold out.
+- Contact: ssrsupremacy@gmail.com
 
 ## License
 

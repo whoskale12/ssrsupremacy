@@ -18,7 +18,7 @@ export const LINKS = {
   bandcamp: 'https://simplefunrecords.bandcamp.com/album/now-i-see-you-now-i-dont',
   instagram: 'https://www.instagram.com/ssrsupremacy_',
   youtube: '#', // placeholder
-  email: 'mailto:booking@ssrsupremacy.com', // placeholder
+  email: 'mailto:ssrsupremacy@gmail.com', // placeholder
 }
 
 // Bandcamp album id parsed from the embed share code (update with the real id if it changes).

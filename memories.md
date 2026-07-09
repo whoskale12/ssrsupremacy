@@ -14,29 +14,43 @@ Album: "Now I See You, Now I Don't" (2026)
 - [x] React Router navigation structure
   - Home page
   - Profile page
-  - Music page (with Bandcamp embed)
-  - Store page (with merch grid)
+  - Music page
+  - Store page
+  - Merch detail page
+  - Cart page
   - 404 Not Found page
 - [x] Component structure established
   - Navbar with navigation
-  - Footer
+  - Footer with transparent logo
   - GrainOverlay (texture effect)
   - MerchCard, MemberCard components
   - PageHeader, SectionHeading components
-  - Icons (social links)
+  - Icons (Instagram, Bandcamp, YouTube)
   - Marquee component
 - [x] Git repository initialization
-- [x] Pushed initial commit to GitHub: https://github.com/whoskale12/ssrsupremacy.git
+- [x] Pushed project to GitHub: https://github.com/whoskale12/ssrsupremacy.git
+- [x] Added real band/brand assets
+  - Transparent `LOGO.png`
+  - Band photos
+  - Album cover: `Cover Maxi-Single.jpg`
+  - T-Shirt image: `kaosputih.png`
+  - Key Chain image: `keychain.png`
+- [x] Music page updated with album cover and Bandcamp link
+- [x] Spotify references removed from the site
+- [x] Store merchandise reduced to 3 products:
+  - "Now I see you, Now i don't T-Shirt"
+  - Key Chain
+  - Cassette Tape
+- [x] All merch products marked as sold out
+- [x] Contact email updated to `ssrsupremacy@gmail.com`
 
 ### 🚧 In Progress / TODO
-- [ ] **Add-to-Cart Functionality** (Next Priority)
-  - MerchCard button is wired but not functional
-  - Need: Cart context/state management
-  - Need: Cart display component
-  - Need: Checkout UI or order form
-  
+- [ ] Add final Cassette Tape product photo when asset is ready
+- [ ] Replace placeholder YouTube link when official channel/video URL is ready
+- [ ] Final copy/content review before full public release
+
 ### 📋 Future Features
-- [ ] User authentication/accounts
+- [ ] Re-enable merch availability when stock is ready
 - [ ] Payment integration
 - [ ] Order tracking
 - [ ] Email notifications for orders
@@ -45,14 +59,14 @@ Album: "Now I See You, Now I Don't" (2026)
 - [ ] Comments/Fan messages
 
 ## Tech Stack
-- **Frontend**: React 18.3.1
-- **Build**: Vite 5.4.8
-- **Styling**: Tailwind CSS 3.4.13
-- **Routing**: React Router DOM 6.26.2
+- **Frontend**: React 18
+- **Build**: Vite 5
+- **Styling**: Tailwind CSS 3
+- **Routing**: React Router DOM 6
 - **Design**: Custom brand styling (bone, blood, ink, olive colors)
 
 ## Project Structure
-```
+```txt
 src/
 ├── components/          # Reusable UI components
 │   ├── Navbar.jsx
@@ -61,11 +75,15 @@ src/
 │   ├── MemberCard.jsx
 │   ├── PageHeader.jsx
 │   └── ...
+├── context/             # App state
+│   └── CartContext.jsx
 ├── pages/               # Page components
 │   ├── Home.jsx
 │   ├── Profile.jsx
 │   ├── Music.jsx
 │   ├── Store.jsx
+│   ├── MerchDetail.jsx
+│   ├── Cart.jsx
 │   └── NotFound.jsx
 ├── data/                # Static data
 │   ├── site.js          # Band info, links, nav config
@@ -83,7 +101,10 @@ src/
 - **Aesthetic**: Gritty, DIY band website feel
 
 ## Notes
-- Merch data currently uses placeholder prices in Rupiah (Rp)
-- Images use SVG placeholders from `/public/placeholders/`
+- Current contact email: `ssrsupremacy@gmail.com`
+- Social links currently include Instagram, Bandcamp, and YouTube only.
+- Spotify has been removed from the site.
+- Merch data uses Rupiah (Rp) prices.
+- All merch is currently marked sold out.
+- Cassette Tape still uses placeholder image until final photo is provided.
 - Real band photos available: `foto band 1.jpg`, `foto band 2.jpg`
-- Store currently shows preview message directing to Instagram DM for orders

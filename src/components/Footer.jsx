@@ -47,7 +47,7 @@ export default function Footer() {
               </a>
             </div>
             <a href={LINKS.email} className="font-mono text-sm text-bone/80 hover:text-blood transition-colors break-all">
-              booking@ssrsupremacy.com
+              ssrsupremacy@gmail.com
             </a>
           </div>
         </div>

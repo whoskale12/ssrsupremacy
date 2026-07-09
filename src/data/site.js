@@ -17,7 +17,6 @@ export const BAND = {
 export const LINKS = {
   bandcamp: 'https://simplefunrecords.bandcamp.com/album/now-i-see-you-now-i-dont',
   instagram: 'https://www.instagram.com/ssrsupremacy_',
-  spotify: '#', // placeholder
   youtube: '#', // placeholder
   email: 'mailto:booking@ssrsupremacy.com', // placeholder
 }

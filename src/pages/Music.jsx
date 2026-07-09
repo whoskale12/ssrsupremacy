@@ -1,10 +1,8 @@
-import { BAND, LINKS, BANDCAMP_ALBUM_ID } from '../data/site.js'
+import { BAND, LINKS } from '../data/site.js'
 import PageHeader from '../components/PageHeader.jsx'
-import { BandcampIcon, SpotifyIcon } from '../components/Icons.jsx'
+import { BandcampIcon } from '../components/Icons.jsx'
 
 export default function Music() {
-  const embedSrc = `https://bandcamp.com/EmbeddedPlayer/album=${BANDCAMP_ALBUM_ID}/size=large/bgcol=0a0a0a/linkcol=c1272d/tracklist=true/transparent=true/`
-
   return (
     <div>
       <PageHeader
@@ -14,17 +12,9 @@ export default function Music() {
       />
 
       <section className="mx-auto max-w-7xl px-4 md:px-8 py-16 grid gap-10 lg:grid-cols-2 items-start">
-        {/* Bandcamp player */}
-        <div className="hard-border bg-panel p-2">
-          <iframe
-            title="SSR SUPREMACY — Bandcamp player"
-            className="w-full"
-            style={{ border: 0, height: 470 }}
-            src={embedSrc}
-            seamless
-          >
-            <a href={LINKS.bandcamp}>{BAND.album.title} by SSR SUPREMACY</a>
-          </iframe>
+        {/* Album cover */}
+        <div className="hard-border bg-panel overflow-hidden">
+          <img src="/Cover Maxi-Single.jpg" alt={BAND.album.title} className="w-full h-full object-cover" />
         </div>
 
         {/* Tracklist + links */}
@@ -46,9 +36,6 @@ export default function Music() {
           <div className="flex flex-wrap gap-3 mt-8">
             <a href={LINKS.bandcamp} target="_blank" rel="noreferrer" className="btn-punk flex items-center gap-2">
               <BandcampIcon className="w-4 h-4" /> Bandcamp
-            </a>
-            <a href={LINKS.spotify} target="_blank" rel="noreferrer" className="btn-ghost flex items-center gap-2">
-              <SpotifyIcon className="w-4 h-4" /> Spotify
             </a>
           </div>
           <p className="font-mono text-xs text-bone/40 mt-6">

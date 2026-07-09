@@ -5,21 +5,21 @@ export const MEMBERS = [
     id: 1,
     name: 'Jay',
     role: 'Vocals',
-    img: '/placeholders/vokal.jpeg',
+    img: '/placeholders/vokal.webp',
     bio: 'Frontman and primary lyricist. Turns heartbreak into hooks you can scream back.',
   },
   {
     id: 2,
     name: 'Samil',
     role: 'Guitar',
-    img: '/placeholders/guitar1.jpeg',
+    img: '/placeholders/guitar1.webp',
     bio: 'Bright, ringing leads and the occasional wall of distortion. Riff architect.',
   },
   {
     id: 3,
     name: 'Ari',
     role: 'Guitar',
-    img: '/placeholders/guitar2.jpeg',
+    img: '/placeholders/guitar2.webp',
     bio: 'Rhythm engine and texture. Lives in the reverb tank.',
   },
   {
@@ -33,7 +33,7 @@ export const MEMBERS = [
     id: 5,
     name: 'ari',
     role: 'Drums',
-    img: '/placeholders/drum.jpeg',
+    img: '/placeholders/drum.webp',
     bio: 'Fast hands, faster fills. The reason the pit never stops.',
   },
 ]

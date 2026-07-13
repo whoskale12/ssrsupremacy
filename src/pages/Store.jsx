@@ -15,8 +15,7 @@ export default function Store() {
         </div>
         <div className="mt-10 hard-border bg-panel p-6 text-center">
           <p className="font-mono text-sm text-bone/70">
-            🛒 This store is a preview — checkout isn’t live yet. DM us on{' '}
-            <span className="text-blood">Instagram</span> to order for now.
+            By purchasing and using our merchandise, you support the continuous growth of the ssrsupremacy ecosystem. Made with 100% pure heart🤍✨
           </p>
         </div>
       </section>

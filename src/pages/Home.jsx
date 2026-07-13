@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-end overflow-hidden border-b-2 border-bone">
-        <img src="/band-1.jpg" alt="SSR SUPREMACY" className="absolute inset-0 w-full h-full object-cover photo-bw opacity-60" />
+        <img src="/band-1.webp" alt="SSR SUPREMACY" className="absolute inset-0 w-full h-full object-cover photo-bw opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
         <div className="relative mx-auto max-w-7xl w-full px-4 md:px-8 pb-14">
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-olive">
@@ -40,7 +40,7 @@ export default function Home() {
       {/* ABOUT */}
       <section className="mx-auto max-w-7xl px-4 md:px-8 py-20 grid gap-10 md:grid-cols-2 items-center">
         <div className="relative aspect-[4/5] hard-border overflow-hidden">
-          <img src="/band-2.jpg" alt="The band" className="w-full h-full object-cover photo-bw" />
+          <img src="/band-2.webp" alt="The band" className="w-full h-full object-cover photo-bw" />
         </div>
         <div>
           <SectionHeading kicker="Who We Are" title="Loud, Honest, Broken" />
@@ -60,7 +60,7 @@ export default function Home() {
       <section className="border-y-2 border-bone bg-panel">
         <div className="mx-auto max-w-7xl px-4 md:px-8 py-20 grid gap-10 md:grid-cols-[1fr_1.2fr] items-center">
            <div className="relative aspect-square hard-border overflow-hidden bg-ink">
-             <img src="/Cover Maxi-Single.jpg" alt={BAND.album.title} className="w-full h-full object-cover" />
+             <img src="/Cover Maxi-Single.webp" alt={BAND.album.title} className="w-full h-full object-cover" />
            </div>
           <div>
             <SectionHeading kicker="New Album" title="Now Streaming" />

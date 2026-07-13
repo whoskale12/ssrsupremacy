@@ -1,0 +1,6 @@
+Pushing to https://github.com/whoskale12/ssrsupremacy.git
+POST git-receive-pack (638 bytes)
+To https://github.com/whoskale12/ssrsupremacy.git
+   d567675..c8ab0c7  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+PUSH_EXIT:0 

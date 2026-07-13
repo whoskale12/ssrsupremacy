@@ -26,7 +26,7 @@ export default function Profile() {
           </p>
         </div>
         <div className="relative aspect-[4/3] hard-border overflow-hidden">
-          <img src="/band-1.jpg" alt="SSR SUPREMACY" className="w-full h-full object-cover photo-bw" />
+          <img src="/band-1.webp" alt="SSR SUPREMACY" className="w-full h-full object-cover photo-bw" />
         </div>
       </section>
 

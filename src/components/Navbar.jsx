@@ -18,7 +18,7 @@ export default function Navbar() {
       <nav className="mx-auto max-w-7xl px-4 md:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src="/LOGO.png" alt="SSR SUPREMACY" className="h-14 w-auto" />
+          <img src="/LOGO.webp" alt="SSR SUPREMACY" className="h-14 w-auto" />
           <span className="hidden sm:block font-heavy uppercase text-sm tracking-widest leading-none">
             SSR<br />Supremacy
           </span>

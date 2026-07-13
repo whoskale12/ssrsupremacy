@@ -14,7 +14,7 @@ export default function Music() {
       <section className="mx-auto max-w-7xl px-4 md:px-8 py-16 grid gap-10 lg:grid-cols-2 items-start">
         {/* Album cover */}
         <div className="hard-border bg-panel overflow-hidden">
-          <img src="/Cover Maxi-Single.jpg" alt={BAND.album.title} className="w-full h-full object-cover" />
+          <img src="/Cover Maxi-Single.webp" alt={BAND.album.title} className="w-full h-full object-cover" />
         </div>
 
         {/* Tracklist + links */}

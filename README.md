@@ -1,124 +1,77 @@
-# SSR Supremacy Website
+# SSR Supremacy
 
-Official website project for **SSR SUPREMACY**, an Emotional Pop-Punk / Hardcore band from West Java, Indonesia.
-
-The site is built with React, Vite, Tailwind CSS, and React Router.
+This project is a React-based application built with Vite. It utilizes various modern web technologies and libraries to deliver a dynamic user experience.
 
 ## Features
 
-- Responsive band website
-- Home page with hero/intro sections
-- Profile page for band information
-- Music page with album cover and Bandcamp link
-- Store page with merchandise (3 products: T-Shirt, Key Chain, Cassette Tape)
-- Custom dark gritty visual style
-- Reusable component structure
-- Static data configuration for band info, members, merch, and links
-
-## Tech Stack
-
-- React 18
-- Vite 5
-- Tailwind CSS 3
-- React Router DOM 6
-- PostCSS / Autoprefixer
+- **React:** A JavaScript library for building user interfaces.
+- **Vite:** A fast build tool that provides an instant development server and bundles your code for production.
+- **Framer Motion:** A production-ready motion library for React.
+- **Lucide React:** A beautiful and consistent icon toolkit for React.
+- **React Router DOM:** Declarative routing for React.js.
+- **Tailwind CSS:** A utility-first CSS framework for rapidly building custom designs.
+- **PostCSS** and **Autoprefixer:** For processing CSS and adding vendor prefixes.
 
 ## Project Structure
 
-```txt
-src/
-├── components/
-│   ├── Footer.jsx
-│   ├── GrainOverlay.jsx
-│   ├── Icons.jsx
-│   ├── Marquee.jsx
-│   ├── MemberCard.jsx
-│   ├── MerchCard.jsx
-│   ├── Navbar.jsx
-│   ├── PageHeader.jsx
-│   └── SectionHeading.jsx
-├── data/
-│   ├── members.js
-│   ├── merch.js
-│   └── site.js
-├── pages/
-│   ├── Home.jsx
-│   ├── Music.jsx
-│   ├── NotFound.jsx
-│   ├── Profile.jsx
-│   └── Store.jsx
-├── App.jsx
-├── index.css
-└── main.jsx
-```
+The project follows a standard React application structure:
 
-## Getting Started
+- `public/`: Static assets.
+- `src/`: Main source code.
+  - `src/components/`: Reusable React components.
+  - `src/context/`: React context providers for global state management.
+  - `src/data/`: Data files used in the application.
+  - `src/hooks/`: Custom React hooks.
+  - `src/pages/`: Page-level components, representing different views of the application.
+  - `src/App.jsx`: The main application component.
+  - `src/main.jsx`: Entry point of the React application.
+  - `src/index.css`: Main CSS file, likely including Tailwind CSS imports.
+- `scripts/`: Utility scripts for various tasks, such as image optimization.
 
-### 1. Install dependencies
+## Installation and Setup
 
-```bash
-npm install
-```
+To get the project up and running, follow these steps:
 
-### 2. Run development server
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/whoskale12/ssrsupremacy.git
+   cd ssrsupremacy
+   ```
 
-```bash
-npm run dev
-```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-### 3. Build for production
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   This will start a local development server, usually accessible at `http://localhost:5173`.
 
-```bash
-npm run build
-```
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+   This command bundles the application for production, creating optimized static assets in the `dist` directory.
 
-### 4. Preview production build
+5. **Preview the production build:**
+   ```bash
+   npm run preview
+   ```
+   This command serves the production build locally for testing.
 
-```bash
-npm run preview
-```
+## Scripts
 
-## Main Data Files
+- `scripts/convert_png_to_webp.py`: Converts PNG images to WebP format.
+- `scripts/convert_to_webp.py`: Converts images to WebP format.
+- `scripts/make_logo_transparent.py`: Script for making the logo transparent.
+- `scripts/resize_logo.py`: Script for resizing the logo.
 
-Update site content from these files:
+## Contributing
 
-- `src/data/site.js`  
-  Band name, origin, genre, album info, navigation, social links.
-
-- `src/data/members.js`  
-  Band member data.
-
-- `src/data/merch.js`  
-  Store merchandise data.
-
-## Current Status
-
-Website is live with the following features complete:
-
-- ✅ Home page with hero/album sections
-- ✅ Profile page with band info
-- ✅ Music page with album cover and Bandcamp embed
-- ✅ Store page with 3 merchandise items
-- ✅ Shopping cart with merchandise management
-- ✅ WhatsApp checkout integration with order form
-- ✅ Responsive design with dark gritty aesthetic
-- ✅ Social links (Instagram, Bandcamp, YouTube)
-- ✅ Key Chain available for order
-
-See [`memories.md`](./memories.md) for detailed progress notes and development history.
-
-## Repository
-
-GitHub repository:
-
-https://github.com/whoskale12/ssrsupremacy.git
-
-## Notes
-
-- `node_modules/` and `dist/` are intentionally ignored by Git.
-- All merchandise items are currently marked as sold out.
-- Contact: ssrsupremacy@gmail.com
+Feel free to contribute to this project by submitting issues or pull requests.
 
 ## License
 
-Private project for SSR SUPREMACY.
+(Add your license information here, e.g., MIT, Apache 2.0, etc.)

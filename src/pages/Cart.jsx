@@ -1,20 +1,19 @@
 import { Link } from 'react-router-dom'
 import { useMemo, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useCart } from '../context/CartContext.jsx'
-import { X } from 'lucide-react'
 import { ScrollReveal, HoverScale, StaggerContainer, StaggerItem } from '../components/ScrollReveal.jsx'
 
 function makeWhatsappMessage(cartItems, buyer) {
   const lines = [
-    'Halo SSR Supremacy, saya mau order merch:',
+    "Hello SSR Supremacy, I'd like to order merch:",
     '',
-    ...cartItems.map((item, index) => `${index + 1}. ${item.name} - Size: ${item.size} - Qty: ${item.quantity} - ${item.price}`),
+    ...cartItems.map((item, index) => `${index + 1}. ${item.name} \n- Size: ${item.size} \n- Qty: ${item.quantity} - IDR ${item.price.replace('Rp ', '')}`),
     '',
-    `Nama: ${buyer.name || '-'}`,
-    `No. HP: ${buyer.phone || '-'}`,
-    `Alamat: ${buyer.address || '-'}`,
-    `Catatan: ${buyer.notes || '-'}`,
+    `Name: ${buyer.name || '-'}`,
+    `Phone No.: ${buyer.phone || '-'}`,
+    `Address: ${buyer.address || '-'}`,
+    `Notes: ${buyer.notes || '-'}`,
   ]
 
   return lines.join('\n')
@@ -28,9 +27,6 @@ export default function Cart() {
     address: '',
     notes: '',
   })
-  const [showQrisModal, setShowQrisModal] = useState(false)
-  const [qrisConfirmed, setQrisConfirmed] = useState(false)
-
    const whatsappUrl = useMemo(() => {
      const phoneNumber = '6285711631027'
      const message = encodeURIComponent(makeWhatsappMessage(cartItems, buyer))
@@ -40,21 +36,6 @@ export default function Cart() {
   function handleChange(event) {
     const { name, value } = event.target
     setBuyer((current) => ({ ...current, [name]: value }))
-  }
-
-  function handleQrisClick() {
-    setShowQrisModal(true)
-    setQrisConfirmed(false)
-  }
-
-  function handleCloseQrisModal() {
-    setShowQrisModal(false)
-    setQrisConfirmed(false)
-  }
-
-  function handleQrisConfirmed() {
-    window.open(whatsappUrl, '_blank')
-    handleCloseQrisModal()
   }
 
   return (
@@ -200,110 +181,25 @@ export default function Cart() {
                 </div>
               </div>
 
-               <div className="space-y-3">
-                 <HoverScale scale={1.05}>
-                   <button
-                     onClick={handleQrisClick}
-                     className="block w-full border-2 border-blood bg-blood px-6 py-4 text-center font-heavy uppercase text-xs tracking-widest text-bone hover:bg-transparent hover:text-blood transition-all"
-                   >
-                     Checkout via QRIS
-                   </button>
-                 </HoverScale>
-                 <HoverScale scale={1.05}>
-                   <a
-                     href={whatsappUrl}
-                     target="_blank"
-                     rel="noreferrer"
-                     className="block w-full border-2 border-blood bg-transparent px-6 py-4 text-center font-heavy uppercase text-xs tracking-widest text-blood hover:bg-blood hover:text-bone transition-all"
-                   >
-                     Checkout via WhatsApp
-                   </a>
-                 </HoverScale>
-               </div>
+                <div className="space-y-3">
+                  <HoverScale scale={1.05}>
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="block w-full border-2 border-blood bg-blood px-6 py-4 text-center font-heavy uppercase text-xs tracking-widest text-bone hover:bg-transparent hover:text-blood transition-all"
+                    >
+                      Checkout via WhatsApp
+                    </a>
+                  </HoverScale>
+                </div>
 
-                <p className="font-mono text-xs text-bone/50 mt-4 leading-relaxed">
-                  Pilih metode pembayaran: QRIS atau WhatsApp.
-                </p>
+                 <p className="font-mono text-xs text-bone/50 mt-4 leading-relaxed">
+                   Checkout via WhatsApp untuk menyelesaikan pesanan.
+                 </p>
              </motion.aside>
           </div>
         )}
-         <AnimatePresence>
-           {showQrisModal && (
-             <motion.div 
-               className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
-               initial={{ opacity: 0 }}
-               animate={{ opacity: 1 }}
-               exit={{ opacity: 0 }}
-               transition={{ duration: 0.2 }}
-             >
-               <motion.div 
-                 className="hard-border bg-panel max-w-md w-full p-6"
-                 initial={{ scale: 0.9, opacity: 0 }}
-                 animate={{ scale: 1, opacity: 1 }}
-                 exit={{ scale: 0.9, opacity: 0 }}
-                 transition={{ duration: 0.3 }}
-               >
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="font-heavy uppercase text-xl">Pembayaran QRIS</h3>
-                <button
-                  onClick={handleCloseQrisModal}
-                  className="text-bone/60 hover:text-bone transition-colors"
-                >
-                  <X size={24} />
-                </button>
-              </div>
-
-              <div className="mb-6">
-                <div className="hard-border bg-ink p-6 aspect-square flex items-center justify-center mb-4">
-                  <div className="text-center">
-                    <p className="font-mono text-sm text-bone/60 mb-2">QRIS Code Placeholder</p>
-                    <p className="font-mono text-xs text-bone/40">[Gambar QRIS akan tampil di sini]</p>
-                  </div>
-                </div>
-
-                <div className="space-y-3 font-mono text-sm text-bone/70">
-                  <p>📱 Scan QRIS code di atas dengan aplikasi e-wallet kamu</p>
-                  <p>💳 Atau input manual nomor referensi jika diperlukan</p>
-                  <p className="text-blood font-heavy">Total: {totals.subtotalLabel}</p>
-                </div>
-              </div>
-
-              <div className="mb-4 flex items-start gap-3">
-                <input
-                  type="checkbox"
-                  id="qris-confirm"
-                  checked={qrisConfirmed}
-                  onChange={(e) => setQrisConfirmed(e.target.checked)}
-                  className="mt-1 cursor-pointer"
-                />
-                <label htmlFor="qris-confirm" className="font-mono text-sm text-bone/80 cursor-pointer">
-                  Saya sudah melakukan pembayaran melalui QRIS di atas
-                </label>
-              </div>
-
-              <div className="space-y-2">
-                <button
-                  onClick={handleQrisConfirmed}
-                  disabled={!qrisConfirmed}
-                  className={`w-full border-2 border-blood px-6 py-3 text-center font-heavy uppercase text-xs tracking-widest transition-all ${
-                    qrisConfirmed
-                      ? 'bg-blood text-bone hover:bg-transparent hover:text-blood'
-                      : 'bg-bone/10 text-bone/40 border-bone/30 cursor-not-allowed'
-                  }`}
-                >
-                  Lanjut ke WhatsApp
-                </button>
-                <button
-                  onClick={handleCloseQrisModal}
-                  className="w-full border-2 border-bone/30 bg-transparent px-6 py-3 text-center font-heavy uppercase text-xs tracking-widest text-bone/60 hover:text-bone hover:border-bone transition-all"
-                >
-                  Batal
-                 </button>
-               </div>
-             </motion.div>
-           </motion.div>
-           )}
-         </AnimatePresence>
       </section>
     </div>
   )

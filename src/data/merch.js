@@ -7,7 +7,7 @@ export const MERCH = [
     img: '/rabbitwhite/kaosputih.webp',
     type: 'Apparel',
     soldOut: false,
-    description: 'SSR SUPREMACY - Now I See You, Now I Don\'t (white)\n\nIntroducing our new maxi - single "Now I See You, Now I Don\'t". we celebrate with newest article from SSR SUPREMACY designed by Jayiesm.\n\n✓ Size: S - XXL Product\n✓ T-Shirt Color: Black and White\n✓ Fabric: Stitch Supply 16s Cotton\n✓ Graphic: Plastisol High-quality Sablon Print',
+    description: 'SSR SUPREMACY - Now I See You, Now I Don\'t (white)\n\nIntroducing our new maxi - single "Now I See You, Now I Don\'t". we celebrate with newest article from SSR SUPREMACY designed by Jayiesm.\n\n✓ Size: S - XXL Product\n✓ T-Shirt Color: White\n✓ Fabric: Stitch Supply 16s Cotton\n✓ Graphic: Plastisol High-quality Sablon Print',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     gallery: [
       { label: 'Front View', img: '/rabbitwhite/detaildepan.webp' },
@@ -36,7 +36,7 @@ export const MERCH = [
     img: '/black rabbit ssr/kaoshitam.webp',
     type: 'Apparel',
     soldOut: false,
-    description: 'SSR SUPREMACY - Now I See You, Now I Don\'t (black)\n\nIntroducing our new maxi - single "Now I See You, Now I Don\'t". we celebrate with newest article from SSR SUPREMACY designed by Jayiesm.\n\n✓ Size: S - XXL Product\n✓ T-Shirt Color: Black and White\n✓ Fabric: Stitch Supply 16s Cotton\n✓ Graphic: Plastisol High-quality Sablon Print',
+    description: 'SSR SUPREMACY - Now I See You, Now I Don\'t (black)\n\nIntroducing our new maxi - single "Now I See You, Now I Don\'t". we celebrate with newest article from SSR SUPREMACY designed by Jayiesm.\n\n✓ Size: S - XXL Product\n✓ T-Shirt Color: Black\n✓ Fabric: Stitch Supply 16s Cotton\n✓ Graphic: Plastisol High-quality Sablon Print',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     gallery: [
       { label: 'Front View', img: '/black rabbit ssr/frontview.webp' },
@@ -51,7 +51,7 @@ export const MERCH = [
     img: '/whitefuzzymonster/detail1.webp',
     type: 'Apparel',
     soldOut: false,
-    description: 'SSR SUPREMACY X A Prapto - Eat That Shit (White)\n\nAn exclusive, limited-edition t-shirt in collaboration with a prapto "Eat That Shit"\n\n✓ T-Shirt Color: Black & White\n✓ Fabric: Stitch Supply 16s\n✓ Cotton Graphic: High Quality Print Plastisol',
+    description: 'SSR SUPREMACY X A Prapto - Eat That Shit (White)\n\nAn exclusive, limited-edition t-shirt in collaboration with a prapto "Eat That Shit"\n\n✓ T-Shirt Color: White\n✓ Fabric: Stitch Supply 16s\n✓ Cotton Graphic: High Quality Print Plastisol',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     gallery: [
       { label: 'Front View', img: '/whitefuzzymonster/detail1.webp' },
@@ -66,7 +66,7 @@ export const MERCH = [
     img: '/blackfuzzymonster/blackfuzzymonster.webp',
     type: 'Apparel',
     soldOut: false,
-    description: 'SSR SUPREMACY X A Prapto - Eat That Shit (Black)\n\nAn exclusive, limited-edition t-shirt in collaboration with a prapto "Eat That Shit"\n\n✓ T-Shirt Color: Black & White\n✓ Fabric: Stitch Supply 16s\n✓ Cotton Graphic: High Quality Print Plastisol',
+    description: 'SSR SUPREMACY X A Prapto - Eat That Shit (Black)\n\nAn exclusive, limited-edition t-shirt in collaboration with a prapto "Eat That Shit"\n\n✓ T-Shirt Color: Black\n✓ Fabric: Stitch Supply 16s\n✓ Cotton Graphic: High Quality Print Plastisol',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     gallery: [
       { label: 'Front View', img: '/blackfuzzymonster/blackfuzzymonster.webp' },

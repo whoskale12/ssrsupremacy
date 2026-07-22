@@ -32,12 +32,12 @@ export default function MerchDetail() {
   }
 
   function handleAddToCart() {
-    if (!selectedSize) {
+    if (product.sizes && product.sizes.length > 0 && !selectedSize) {
       alert('Pilih ukuran dulu!')
       return
     }
 
-    addToCart(product, selectedSize, quantity)
+    addToCart(product, selectedSize || 'One Size', quantity)
     setAddedToCart(true)
 
     setTimeout(() => {
@@ -140,36 +140,54 @@ export default function MerchDetail() {
                  </motion.p>
                </div>
 
-               {/* Description */}
-               <motion.p 
-                 className="text-bone/80 leading-relaxed"
-                 initial={{ opacity: 0 }}
-                 animate={{ opacity: 1 }}
-                 transition={{ delay: 0.4 }}
-               >
-                 {product.description}
-               </motion.p>
+                {/* Description */}
+                <motion.div 
+                  className="text-bone/80 leading-relaxed space-y-2"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  {product.description.split('\n').map((line, idx) => {
+                    if (line.trim() === '') {
+                      return <div key={idx} className="h-2" />
+                    }
+                    if (line.startsWith('✓')) {
+                      return (
+                        <div key={idx} className="flex gap-2 items-start">
+                          <span className="text-blood mt-0.5">✓</span>
+                          <span>{line.substring(1).trim()}</span>
+                        </div>
+                      )
+                    }
+                    if (line === 'SSR SUPREMACY Keychain') {
+                      return <h3 key={idx} className="font-heavy text-lg uppercase">{line}</h3>
+                    }
+                    return <p key={idx} className="text-sm text-bone/60 italic">{line}</p>
+                  })}
+                </motion.div>
 
             {/* Size Selection */}
-            <div>
-              <label className="block font-heavy uppercase text-sm tracking-widest mb-3">Ukuran</label>
-              <div className="grid grid-cols-3 gap-2">
-                {product.sizes.map((size) => (
-                  <button
-                    key={size}
-                    onClick={() => setSelectedSize(size)}
-                    disabled={product.soldOut}
-                    className={`hard-border py-3 font-heavy uppercase text-sm tracking-widest transition-all ${
-                      selectedSize === size
-                        ? 'bg-blood text-bone border-blood'
-                        : 'bg-transparent border-bone/50 text-bone hover:border-bone disabled:border-bone/20 disabled:text-bone/20 disabled:cursor-not-allowed'
-                    }`}
-                  >
-                    {size}
-                  </button>
-                ))}
+            {product.sizes && product.sizes.length > 0 && (
+              <div>
+                <label className="block font-heavy uppercase text-sm tracking-widest mb-3">Ukuran</label>
+                <div className="grid grid-cols-3 gap-2">
+                  {product.sizes.map((size) => (
+                    <button
+                      key={size}
+                      onClick={() => setSelectedSize(size)}
+                      disabled={product.soldOut}
+                      className={`hard-border py-3 font-heavy uppercase text-sm tracking-widest transition-all ${
+                        selectedSize === size
+                          ? 'bg-blood text-bone border-blood'
+                          : 'bg-transparent border-bone/50 text-bone hover:border-bone disabled:border-bone/20 disabled:text-bone/20 disabled:cursor-not-allowed'
+                      }`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Quantity Selection */}
             <div>

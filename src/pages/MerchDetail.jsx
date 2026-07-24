@@ -76,11 +76,16 @@ export default function MerchDetail() {
                  animate={{ opacity: 1, scale: 1 }}
                  transition={{ duration: 0.4 }}
                >
-                 <img
-                   src={currentGalleryItem.img}
-                   alt={currentGalleryItem.label}
-                   className="w-full h-full object-cover"
-                 />
+                  <img
+                    src={currentGalleryItem.img}
+                    alt={currentGalleryItem.label}
+                    className="w-full h-full object-cover"
+                    style={
+                      currentGalleryItem.label === 'Back View'
+                        ? { objectPosition: 'center 25%' }
+                        : undefined
+                    }
+                  />
                </motion.div>
 
                {/* Thumbnail Gallery */}

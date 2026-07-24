@@ -3,7 +3,7 @@ export const MERCH = [
   {
     id: 'kaos-cover-hitam',
     name: 'SSR SUPREMACY - Now I See You, Now I Don\'t (white)',
-    price: 'Rp 180.000',
+    price: 'Rp 165.000',
     img: '/rabbitwhite/kaosputih.webp',
     type: 'Apparel',
     soldOut: false,
@@ -18,7 +18,7 @@ export const MERCH = [
     {
       id: 'key-chain',
       name: 'SSR SUPREMACY Keychain',
-      price: 'Rp 45.000',
+      price: 'Rp 25.000',
       img: '/keychain/keychain.webp',
       type: 'Accessory',
       soldOut: false,
@@ -32,7 +32,7 @@ export const MERCH = [
   {
     id: 'cassette-tape',
     name: 'SSR SUPREMACY - Now I See You, Now I Don\'t (black)',
-    price: 'Rp 180.000',
+    price: 'Rp 165.000',
     img: '/black rabbit ssr/kaoshitam.webp',
     type: 'Apparel',
     soldOut: false,
@@ -46,12 +46,12 @@ export const MERCH = [
   },
   {
     id: 'kaos-artwork-putih',
-    name: 'SSR SUPREMACY X A Prapto - Eat That Shit (White)',
-    price: 'Rp 180.000',
+    name: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (White)',
+    price: 'Rp 165.000',
     img: '/whitefuzzymonster/detail1.webp',
     type: 'Apparel',
     soldOut: false,
-    description: 'SSR SUPREMACY X A Prapto - Eat That Shit (White)\n\nAn exclusive, limited-edition t-shirt in collaboration with a prapto "Eat That Shit"\n\n✓ T-Shirt Color: White\n✓ Fabric: Stitch Supply 16s\n✓ Cotton Graphic: High Quality Print Plastisol',
+    description: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (White)\n\nKolaborasi eksklusif edisi terbatas antara SSR SUPREMACY dan NOWPAPS dalam koleksi "Eat That Shit". T-shirt ini menampilkan artwork khas yang menggabungkan estetika underground dengan sentuhan kontemporer.\n\n✓ T-Shirt Color: White\n✓ Fabric: Stitch Supply 16s Cotton\n✓ Graphic: High Quality Plastisol Print\n✓ Fit: Regular Fit\n✓ Limited Edition',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     gallery: [
       { label: 'Front View', img: '/whitefuzzymonster/detail1.webp' },
@@ -61,12 +61,12 @@ export const MERCH = [
   },
   {
     id: 'kaos-artwork-hitam',
-    name: 'SSR SUPREMACY X A Prapto - Eat That Shit (Black)',
-    price: 'Rp 180.000',
+    name: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (Black)',
+    price: 'Rp 165.000',
     img: '/blackfuzzymonster/blackfuzzymonster.webp',
     type: 'Apparel',
     soldOut: false,
-    description: 'SSR SUPREMACY X A Prapto - Eat That Shit (Black)\n\nAn exclusive, limited-edition t-shirt in collaboration with a prapto "Eat That Shit"\n\n✓ T-Shirt Color: Black\n✓ Fabric: Stitch Supply 16s\n✓ Cotton Graphic: High Quality Print Plastisol',
+    description: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (Black)\n\nKolaborasi eksklusif edisi terbatas antara SSR SUPREMACY dan NOWPAPS dalam koleksi "Eat That Shit". T-shirt ini menampilkan artwork khas yang menggabungkan estetika underground dengan sentuhan kontemporer.\n\n✓ T-Shirt Color: Black\n✓ Fabric: Stitch Supply 16s Cotton\n✓ Graphic: High Quality Plastisol Print\n✓ Fit: Regular Fit\n✓ Limited Edition',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     gallery: [
       { label: 'Front View', img: '/blackfuzzymonster/blackfuzzymonster.webp' },

@@ -51,7 +51,7 @@ export const MERCH = [
     img: '/whitefuzzymonster/detail1.webp',
     type: 'Apparel',
     soldOut: false,
-    description: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (White)\n\nKolaborasi eksklusif edisi terbatas antara SSR SUPREMACY dan NOWPAPS dalam koleksi "Eat That Shit". T-shirt ini menampilkan artwork khas yang menggabungkan estetika underground dengan sentuhan kontemporer.\n\n✓ T-Shirt Color: White\n✓ Fabric: Cotton Combed 20s\n✓ Graphic: High Quality Plastisol Print\n✓ Fit: Regular Fit\n✓ Limited Edition',
+    description: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (White)\n\n✓ T-Shirt Color: White\n✓ Fabric: Cotton Combed 20s\n✓ Graphic: High Quality Plastisol Print\n✓ Fit: Regular Fit',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     gallery: [
       { label: 'Front View', img: '/whitefuzzymonster/detail1.webp' },
@@ -66,7 +66,7 @@ export const MERCH = [
     img: '/blackfuzzymonster/blackfuzzymonster.webp',
     type: 'Apparel',
     soldOut: false,
-    description: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (Black)\n\nKolaborasi eksklusif edisi terbatas antara SSR SUPREMACY dan NOWPAPS dalam koleksi "Eat That Shit". T-shirt ini menampilkan artwork khas yang menggabungkan estetika underground dengan sentuhan kontemporer.\n\n✓ T-Shirt Color: Black\n✓ Fabric: Cotton Combed 20s\n✓ Graphic: High Quality Plastisol Print\n✓ Fit: Regular Fit\n✓ Limited Edition',
+    description: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (Black)\n\n✓ T-Shirt Color: Black\n✓ Fabric: Cotton Combed 20s\n✓ Graphic: High Quality Plastisol Print\n✓ Fit: Regular Fit',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     gallery: [
       { label: 'Front View', img: '/blackfuzzymonster/blackfuzzymonster.webp' },

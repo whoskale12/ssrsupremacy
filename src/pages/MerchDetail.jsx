@@ -89,7 +89,7 @@ export default function MerchDetail() {
                </motion.div>
 
                {/* Thumbnail Gallery */}
-               <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-4 gap-3">
                  {product.gallery.map((item, idx) => (
                    <motion.button
                      key={idx}

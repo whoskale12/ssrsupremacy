@@ -13,7 +13,7 @@ export const MERCH = [
         { label: 'Front View', img: '/rabbitwhite/detaildepan.webp' },
         { label: 'Back View', img: '/rabbitwhite/detailbelakang.webp' },
         { label: 'Detail View', img: '/rabbitwhite/detailview.webp' },
-        { label: 'Size Chart', img: '/sizechart.jpeg' },
+        { label: 'Size Chart', img: '/sizechart.webp' },
       ],
     },
       {
@@ -43,7 +43,7 @@ export const MERCH = [
         { label: 'Front View', img: '/black rabbit ssr/frontview.webp' },
         { label: 'Back View', img: '/black rabbit ssr/backview.webp' },
         { label: 'Detail View', img: '/black rabbit ssr/detailview.webp' },
-        { label: 'Size Chart', img: '/sizechart.jpeg' },
+        { label: 'Size Chart', img: '/sizechart.webp' },
       ],
     },
     {
@@ -59,7 +59,7 @@ export const MERCH = [
         { label: 'Front View', img: '/whitefuzzymonster/detail1.webp' },
         { label: 'Back View', img: '/whitefuzzymonster/detail2.webp' },
         { label: 'Detail View', img: '/whitefuzzymonster/detail3.webp' },
-        { label: 'Size Chart', img: '/sizechart.jpeg' },
+        { label: 'Size Chart', img: '/sizechart.webp' },
       ],
     },
     {
@@ -75,7 +75,7 @@ export const MERCH = [
         { label: 'Front View', img: '/blackfuzzymonster/blackfuzzymonster.webp' },
         { label: 'Back View', img: '/blackfuzzymonster/detail1.webp' },
         { label: 'Detail View', img: '/blackfuzzymonster/detail2.webp' },
-        { label: 'Size Chart', img: '/sizechart.jpeg' },
+        { label: 'Size Chart', img: '/sizechart.webp' },
       ],
     },
   ]

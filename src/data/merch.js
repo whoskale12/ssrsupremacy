@@ -6,23 +6,23 @@ export const MERCH = [
     price: 'Rp 165.000',
     img: '/rabbitwhite/kaosputih.webp',
     type: 'Apparel',
-    soldOut: false,
+    soldOut: true,
     description: 'SSR SUPREMACY - Now I See You, Now I Don\'t (white)\n\nIntroducing our new maxi - single "Now I See You, Now I Don\'t". we celebrate with newest article from SSR SUPREMACY designed by Jayiesm.\n\n✓ Size: S - XXL Product\n✓ T-Shirt Color: White\n✓ Fabric: Cotton Combed 20s\n✓ Graphic: Plastisol High-quality Sablon Print',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-      gallery: [
-        { label: 'Front View', img: '/rabbitwhite/detaildepan.webp' },
-        { label: 'Back View', img: '/rabbitwhite/detailbelakang.webp' },
-        { label: 'Detail View', img: '/rabbitwhite/detailview.webp' },
-        { label: 'Size Chart', img: '/sizechart.webp' },
-      ],
-    },
-      {
-        id: 'key-chain',
+    gallery: [
+      { label: 'Front View', img: '/rabbitwhite/detaildepan.webp' },
+      { label: 'Back View', img: '/rabbitwhite/detailbelakang.webp' },
+      { label: 'Detail View', img: '/rabbitwhite/detailview.webp' },
+      { label: 'Size Chart', img: '/sizechart.webp' },
+    ],
+  },
+  {
+    id: 'key-chain',
       name: 'SSR SUPREMACY Keychain',
       price: 'Rp 25.000',
       img: '/keychain/keychain.webp',
       type: 'Accessory',
-      soldOut: false,
+      soldOut: true,
       description: 'SSR SUPREMACY Keychain\n\n✓ Clear Acrylic Material, 3mm Thickness\n✓ Guaranteed quality & waterproof\n✓ Rust-proof keyring\n✓ Free Packaging\n\nThis item contains logo from SSR',
       gallery: [
          { label: 'Front View', img: '/keychain/keychain.webp' },
@@ -36,7 +36,7 @@ export const MERCH = [
     price: 'Rp 165.000',
     img: '/black rabbit ssr/kaoshitam.webp',
     type: 'Apparel',
-    soldOut: false,
+    soldOut: true,
     description: 'SSR SUPREMACY - Now I See You, Now I Don\'t (black)\n\nIntroducing our new maxi - single "Now I See You, Now I Don\'t". we celebrate with newest article from SSR SUPREMACY designed by Jayiesm.\n\n✓ Size: S - XXL Product\n✓ T-Shirt Color: Black\n✓ Fabric: Cotton Combed 20s\n✓ Graphic: Plastisol High-quality Sablon Print',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
       gallery: [
@@ -52,7 +52,7 @@ export const MERCH = [
     price: 'Rp 165.000',
     img: '/whitefuzzymonster/detail1.webp',
     type: 'Apparel',
-    soldOut: false,
+    soldOut: true,
     description: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (White)\n\n✓ T-Shirt Color: White\n✓ Fabric: Cotton Combed 20s\n✓ Graphic: High Quality Plastisol Print\n✓ Fit: Regular Fit',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
       gallery: [
@@ -68,7 +68,7 @@ export const MERCH = [
     price: 'Rp 165.000',
     img: '/blackfuzzymonster/blackfuzzymonster.webp',
     type: 'Apparel',
-    soldOut: false,
+    soldOut: true,
     description: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (Black)\n\n✓ T-Shirt Color: Black\n✓ Fabric: Cotton Combed 20s\n✓ Graphic: High Quality Plastisol Print\n✓ Fit: Regular Fit',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
       gallery: [

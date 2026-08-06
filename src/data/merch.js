@@ -18,18 +18,18 @@ export const MERCH = [
   },
   {
     id: 'key-chain',
-      name: 'SSR SUPREMACY Keychain',
-      price: 'Rp 25.000',
-      img: '/keychain/keychain.webp',
-      type: 'Accessory',
-      soldOut: true,
-      description: 'SSR SUPREMACY Keychain\n\n✓ Clear Acrylic Material, 3mm Thickness\n✓ Guaranteed quality & waterproof\n✓ Rust-proof keyring\n✓ Free Packaging\n\nThis item contains logo from SSR',
-      gallery: [
-         { label: 'Front View', img: '/keychain/keychain.webp' },
-         { label: 'Back View', img: '/keychain/detailkeychain.webp' },
-         { label: 'Detail View', img: '/keychain/detailkeychain2.webp' },
-      ],
-    },
+    name: 'SSR SUPREMACY Keychain',
+    price: 'Rp 25.000',
+    img: '/keychain/keychain.webp',
+    type: 'Accessory',
+    soldOut: true,
+    description: 'SSR SUPREMACY Keychain\n\n✓ Clear Acrylic Material, 3mm Thickness\n✓ Guaranteed quality & waterproof\n✓ Rust-proof keyring\n✓ Free Packaging\n\nThis item contains logo from SSR',
+    gallery: [
+      { label: 'Front View', img: '/keychain/keychain.webp' },
+      { label: 'Back View', img: '/keychain/detailkeychain.webp' },
+      { label: 'Detail View', img: '/keychain/detailkeychain2.webp' },
+    ],
+  },
   {
     id: 'cassette-tape',
     name: 'SSR SUPREMACY - Now I See You, Now I Don\'t (black)',
@@ -39,15 +39,15 @@ export const MERCH = [
     soldOut: true,
     description: 'SSR SUPREMACY - Now I See You, Now I Don\'t (black)\n\nIntroducing our new maxi - single "Now I See You, Now I Don\'t". we celebrate with newest article from SSR SUPREMACY designed by Jayiesm.\n\n✓ Size: S - XXL Product\n✓ T-Shirt Color: Black\n✓ Fabric: Cotton Combed 20s\n✓ Graphic: Plastisol High-quality Sablon Print',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-      gallery: [
-        { label: 'Front View', img: '/black rabbit ssr/frontview.webp' },
-        { label: 'Back View', img: '/black rabbit ssr/backview.webp' },
-        { label: 'Detail View', img: '/black rabbit ssr/detailview.webp' },
-        { label: 'Size Chart', img: '/sizechart.webp' },
-      ],
-    },
-    {
-      id: 'kaos-artwork-putih',
+    gallery: [
+      { label: 'Front View', img: '/black rabbit ssr/frontview.webp' },
+      { label: 'Back View', img: '/black rabbit ssr/backview.webp' },
+      { label: 'Detail View', img: '/black rabbit ssr/detailview.webp' },
+      { label: 'Size Chart', img: '/sizechart.webp' },
+    ],
+  },
+  {
+    id: 'kaos-artwork-putih',
     name: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (White)',
     price: 'Rp 165.000',
     img: '/whitefuzzymonster/detail1.webp',
@@ -55,15 +55,15 @@ export const MERCH = [
     soldOut: true,
     description: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (White)\n\n✓ T-Shirt Color: White\n✓ Fabric: Cotton Combed 20s\n✓ Graphic: High Quality Plastisol Print\n✓ Fit: Regular Fit',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-      gallery: [
-        { label: 'Front View', img: '/whitefuzzymonster/detail1.webp' },
-        { label: 'Back View', img: '/whitefuzzymonster/detail2.webp' },
-        { label: 'Detail View', img: '/whitefuzzymonster/detail3.webp' },
-        { label: 'Size Chart', img: '/sizechart.webp' },
-      ],
-    },
-    {
-      id: 'kaos-artwork-hitam',
+    gallery: [
+      { label: 'Front View', img: '/whitefuzzymonster/detail1.webp' },
+      { label: 'Back View', img: '/whitefuzzymonster/detail2.webp' },
+      { label: 'Detail View', img: '/whitefuzzymonster/detail3.webp' },
+      { label: 'Size Chart', img: '/sizechart.webp' },
+    ],
+  },
+  {
+    id: 'kaos-artwork-hitam',
     name: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (Black)',
     price: 'Rp 165.000',
     img: '/blackfuzzymonster/blackfuzzymonster.webp',
@@ -71,14 +71,14 @@ export const MERCH = [
     soldOut: true,
     description: 'SSR SUPREMACY X NOWPAPS - Eat That Shit (Black)\n\n✓ T-Shirt Color: Black\n✓ Fabric: Cotton Combed 20s\n✓ Graphic: High Quality Plastisol Print\n✓ Fit: Regular Fit',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-      gallery: [
-        { label: 'Front View', img: '/blackfuzzymonster/blackfuzzymonster.webp' },
-        { label: 'Back View', img: '/blackfuzzymonster/detail1.webp' },
-        { label: 'Detail View', img: '/blackfuzzymonster/detail2.webp' },
-        { label: 'Size Chart', img: '/sizechart.webp' },
-      ],
-    },
-  ]
+    gallery: [
+      { label: 'Front View', img: '/blackfuzzymonster/blackfuzzymonster.webp' },
+      { label: 'Back View', img: '/blackfuzzymonster/detail1.webp' },
+      { label: 'Detail View', img: '/blackfuzzymonster/detail2.webp' },
+      { label: 'Size Chart', img: '/sizechart.webp' },
+    ],
+  },
+]
 
 export function getMerchById(id) {
   return MERCH.find((item) => item.id === id)

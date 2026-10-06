@@ -13,8 +13,10 @@ export default function MerchCard({ item }) {
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
         {item.soldOut && (
-          <span className="absolute top-3 left-3 bg-ink text-blood border-2 border-blood font-heavy uppercase text-xs tracking-widest px-3 py-1">
-            Sold Out
+          <span className="absolute inset-0 flex items-center justify-center bg-black/60">
+            <span className="bg-ink text-blood border-2 border-blood font-heavy uppercase text-sm tracking-widest px-4 py-2">
+              Sold Out
+            </span>
           </span>
         )}
         <span className="absolute top-3 right-3 bg-olive text-ink font-mono uppercase text-[10px] tracking-widest px-2 py-1">
@@ -33,7 +35,7 @@ export default function MerchCard({ item }) {
               : 'border-blood bg-blood text-bone group-hover:bg-transparent group-hover:text-blood'
           }`}
         >
-          {item.soldOut ? 'Unavailable' : 'View Details'}
+           {item.soldOut ? 'Out of Stock' : 'View Details'}
         </div>
       </div>
     </Link>

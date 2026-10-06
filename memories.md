@@ -3,8 +3,8 @@
 ## Project Overview
 React + Vite web application for **SSR SUPREMACY** band (West Java, Indonesia).
 Genre: Emotional Pop-Punk / Hardcore
-Label: Simplefun Records
-Album: "Now I See You, Now I Don't" (2026)
+Label: Convictionhead Records
+Album: "Shade Of Blue/Vaye" (2026)
 
 ## Current Status
 
@@ -44,11 +44,17 @@ Album: "Now I See You, Now I Don't" (2026)
 - [x] All merch products marked as sold out
 - [x] Contact email updated to `ssrsupremacy@gmail.com`
 - [x] WhatsApp checkout integration completed
-   - Real WhatsApp number: +62 857-1163-1027
-   - Removed dummy WhatsApp number text
-   - Order form with buyer details (name, phone, address, notes)
-   - Cart management (add, remove, update quantity)
+    - Real WhatsApp number: +62 857-1163-1027
+    - Removed dummy WhatsApp number text
+    - Order form with buyer details (name, phone, address, notes)
+    - Cart management (add, remove, update quantity)
 - [x] Key Chain status updated to available (soldOut: false)
+- [x] Dual checkout feature implemented (QRIS + WhatsApp)
+    - Two checkout options: "CHECKOUT VIA QRIS" and "CHECKOUT VIA WHATSAPP"
+    - QRIS modal with payment instructions and confirmation checkbox
+    - "Lanjut ke WhatsApp" button in modal (disabled until confirmation)
+    - Structure ready for Midtrans payment gateway integration
+    - lucide-react dependency added for modal close button icon
 
 ### 🚧 In Progress / TODO
 - [ ] Add final Cassette Tape product photo when asset is ready

@@ -1,4 +1,22 @@
-import { createContext, useContext, useMemo, useState } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+
+const CART_STORAGE_KEY = 'ssr-cart-items'
+
+function getStoredCartItems() {
+  try {
+    const storedItems = localStorage.getItem(CART_STORAGE_KEY)
+
+    if (!storedItems) {
+      return []
+    }
+
+    const cartItems = JSON.parse(storedItems)
+
+    return Array.isArray(cartItems) ? cartItems : []
+  } catch {
+    return []
+  }
+}
 
 const CartContext = createContext(null)
 
@@ -15,7 +33,15 @@ function formatRupiah(value) {
 }
 
 export function CartProvider({ children }) {
-  const [cartItems, setCartItems] = useState([])
+  const [cartItems, setCartItems] = useState(getStoredCartItems)
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems))
+    } catch {
+      // Keep the cart usable when browser storage is unavailable.
+    }
+  }, [cartItems])
 
   function addToCart(product, size, quantity = 1) {
     setCartItems((items) => {

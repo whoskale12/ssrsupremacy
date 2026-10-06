@@ -3,13 +3,13 @@ export const BAND = {
   name: 'SSR SUPREMACY',
   origin: 'West Java, Indonesia',
   genre: 'Emotional Pop-Punk / Hardcore',
-  label: 'Simplefun Records',
+  label: 'Convictionhead Records',
   album: {
-    title: 'Now I See You, Now I Don’t',
+    title: 'Shade Of Blue/Vaye',
     year: '2026',
     tracks: [
-      { n: 1, title: 'No Better Self', len: '04:38' },
-      { n: 2, title: 'Dreamcreeper', len: '03:00' },
+      { n: 1, title: 'Shade Of Blue', len: '3:18' },
+      { n: 2, title: 'Vaye', len: '4:07' },
     ],
   },
 }

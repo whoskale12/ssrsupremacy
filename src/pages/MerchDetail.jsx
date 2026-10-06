@@ -1,8 +1,10 @@
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { getMerchById } from '../data/merch.js'
 import { useCart } from '../context/CartContext.jsx'
 import GrainOverlay from '../components/GrainOverlay.jsx'
+import { ScrollReveal, HoverScale } from '../components/ScrollReveal.jsx'
 
 export default function MerchDetail() {
   const { id } = useParams()
@@ -30,12 +32,12 @@ export default function MerchDetail() {
   }
 
   function handleAddToCart() {
-    if (!selectedSize) {
+    if (product.sizes && product.sizes.length > 0 && !selectedSize) {
       alert('Pilih ukuran dulu!')
       return
     }
 
-    addToCart(product, selectedSize, quantity)
+    addToCart(product, selectedSize || 'One Size', quantity)
     setAddedToCart(true)
 
     setTimeout(() => {
@@ -60,79 +62,137 @@ export default function MerchDetail() {
         </div>
       </div>
 
-      {/* Main Content */}
-      <section className="mx-auto max-w-7xl px-4 md:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          {/* Gallery Section */}
-          <div className="space-y-4">
-            {/* Main Image */}
-            <div className="hard-border bg-ink aspect-square flex items-center justify-center overflow-hidden">
-              <img
-                src={currentGalleryItem.img}
-                alt={currentGalleryItem.label}
-                className="w-full h-full object-cover"
-              />
-            </div>
+       {/* Main Content */}
+       <section className="mx-auto max-w-7xl px-4 md:px-8 py-12">
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+           {/* Gallery Section */}
+           <ScrollReveal delay={0} duration={0.8} direction="left">
+             <div className="space-y-4">
+               {/* Main Image */}
+               <motion.div 
+                 className="hard-border bg-ink aspect-square flex items-center justify-center overflow-hidden"
+                 key={galleryIndex}
+                 initial={{ opacity: 0, scale: 0.95 }}
+                 animate={{ opacity: 1, scale: 1 }}
+                 transition={{ duration: 0.4 }}
+               >
+                  <img
+                    src={currentGalleryItem.img}
+                    alt={currentGalleryItem.label}
+                    className="w-full h-full object-cover"
+                    style={
+                      currentGalleryItem.label === 'Back View'
+                        ? { objectPosition: 'center 25%' }
+                        : undefined
+                    }
+                  />
+               </motion.div>
 
-            {/* Thumbnail Gallery */}
-            <div className="grid grid-cols-3 gap-3">
-              {product.gallery.map((item, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setGalleryIndex(idx)}
-                  className={`hard-border aspect-square flex items-center justify-center overflow-hidden transition-all ${
-                    idx === galleryIndex
-                      ? 'border-blood'
-                      : 'border-bone/30 hover:border-bone/60'
-                  }`}
+               {/* Thumbnail Gallery */}
+                <div className="grid grid-cols-4 gap-3">
+                 {product.gallery.map((item, idx) => (
+                   <motion.button
+                     key={idx}
+                     onClick={() => setGalleryIndex(idx)}
+                     className={`hard-border aspect-square flex items-center justify-center overflow-hidden transition-all ${
+                       idx === galleryIndex
+                         ? 'border-blood'
+                         : 'border-bone/30 hover:border-bone/60'
+                     }`}
+                     whileHover={{ scale: 1.05 }}
+                     transition={{ duration: 0.2 }}
+                   >
+                     <img src={item.img} alt={item.label} className="w-full h-full object-cover" />
+                   </motion.button>
+                 ))}
+               </div>
+
+               {/* Image Label */}
+               <motion.p 
+                 className="font-mono text-xs text-bone/60 uppercase tracking-wider"
+                 initial={{ opacity: 0 }}
+                 animate={{ opacity: 1 }}
+                 transition={{ delay: 0.3 }}
+               >
+                 {galleryIndex + 1} / {product.gallery.length} — {currentGalleryItem.label}
+               </motion.p>
+             </div>
+           </ScrollReveal>
+
+           {/* Product Info & Checkout */}
+           <ScrollReveal delay={0.2} duration={0.8} direction="right">
+             <div className="space-y-6">
+               {/* Header */}
+               <div>
+                 <div className="flex items-start justify-between gap-4 mb-2">
+                   <h1 className="font-heavy text-2xl md:text-3xl uppercase leading-tight">{product.name}</h1>
+                   <motion.span 
+                     className="hard-border bg-olive text-ink font-mono uppercase text-xs tracking-widest px-2 py-1 whitespace-nowrap"
+                     initial={{ opacity: 0, y: -10 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     transition={{ delay: 0.2 }}
+                   >
+                     {product.type}
+                   </motion.span>
+                 </div>
+                 <motion.p 
+                   className="font-mono text-lg text-blood font-heavy"
+                   initial={{ opacity: 0 }}
+                   animate={{ opacity: 1 }}
+                   transition={{ delay: 0.3 }}
+                 >
+                   {product.price}
+                 </motion.p>
+               </div>
+
+                {/* Description */}
+                <motion.div 
+                  className="text-bone/80 leading-relaxed space-y-2"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
                 >
-                  <img src={item.img} alt={item.label} className="w-full h-full object-cover" />
-                </button>
-              ))}
-            </div>
-
-            {/* Image Label */}
-            <p className="font-mono text-xs text-bone/60 uppercase tracking-wider">
-              {galleryIndex + 1} / {product.gallery.length} — {currentGalleryItem.label}
-            </p>
-          </div>
-
-          {/* Product Info & Checkout */}
-          <div className="space-y-6">
-            {/* Header */}
-            <div>
-              <div className="flex items-start justify-between gap-4 mb-2">
-                <h1 className="font-heavy text-2xl md:text-3xl uppercase leading-tight">{product.name}</h1>
-                <span className="hard-border bg-olive text-ink font-mono uppercase text-xs tracking-widest px-2 py-1 whitespace-nowrap">
-                  {product.type}
-                </span>
-              </div>
-              <p className="font-mono text-lg text-blood font-heavy">{product.price}</p>
-            </div>
-
-            {/* Description */}
-            <p className="text-bone/80 leading-relaxed">{product.description}</p>
+                  {product.description.split('\n').map((line, idx) => {
+                    if (line.trim() === '') {
+                      return <div key={idx} className="h-2" />
+                    }
+                    if (line.startsWith('✓')) {
+                      return (
+                        <div key={idx} className="flex gap-2 items-start">
+                          <span className="text-blood mt-0.5">✓</span>
+                          <span>{line.substring(1).trim()}</span>
+                        </div>
+                      )
+                    }
+                    if (line === 'SSR SUPREMACY Keychain') {
+                      return <h3 key={idx} className="font-heavy text-lg uppercase">{line}</h3>
+                    }
+                    return <p key={idx} className="text-sm text-bone/60 italic">{line}</p>
+                  })}
+                </motion.div>
 
             {/* Size Selection */}
-            <div>
-              <label className="block font-heavy uppercase text-sm tracking-widest mb-3">Ukuran</label>
-              <div className="grid grid-cols-3 gap-2">
-                {product.sizes.map((size) => (
-                  <button
-                    key={size}
-                    onClick={() => setSelectedSize(size)}
-                    disabled={product.soldOut}
-                    className={`hard-border py-3 font-heavy uppercase text-sm tracking-widest transition-all ${
-                      selectedSize === size
-                        ? 'bg-blood text-bone border-blood'
-                        : 'bg-transparent border-bone/50 text-bone hover:border-bone disabled:border-bone/20 disabled:text-bone/20 disabled:cursor-not-allowed'
-                    }`}
-                  >
-                    {size}
-                  </button>
-                ))}
+            {product.sizes && product.sizes.length > 0 && (
+              <div>
+                <label className="block font-heavy uppercase text-sm tracking-widest mb-3">Ukuran</label>
+                <div className="grid grid-cols-3 gap-2">
+                  {product.sizes.map((size) => (
+                    <button
+                      key={size}
+                      onClick={() => setSelectedSize(size)}
+                      disabled={product.soldOut}
+                      className={`hard-border py-3 font-heavy uppercase text-sm tracking-widest transition-all ${
+                        selectedSize === size
+                          ? 'bg-blood text-bone border-blood'
+                          : 'bg-transparent border-bone/50 text-bone hover:border-bone disabled:border-bone/20 disabled:text-bone/20 disabled:cursor-not-allowed'
+                      }`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Quantity Selection */}
             <div>
@@ -160,29 +220,39 @@ export default function MerchDetail() {
               </div>
             </div>
 
-            {/* Add to Cart Button */}
-            <button
-              onClick={handleAddToCart}
-              disabled={product.soldOut}
-              className={`w-full hard-border py-4 font-heavy uppercase text-sm tracking-widest transition-all ${
-                product.soldOut
-                  ? 'border-bone/30 bg-bone/10 text-bone/30 cursor-not-allowed'
-                  : addedToCart
-                    ? 'bg-bone text-ink border-bone'
-                    : 'border-blood bg-blood text-bone hover:bg-transparent hover:text-blood'
-              }`}
-            >
-              {product.soldOut ? 'Sold Out' : addedToCart ? '✓ Added to Cart!' : 'Add to Cart'}
-            </button>
+               {/* Add to Cart Button */}
+               <HoverScale scale={1.05}>
+                 <motion.button
+                   onClick={handleAddToCart}
+                   disabled={product.soldOut}
+                   className={`w-full hard-border py-4 font-heavy uppercase text-sm tracking-widest transition-all ${
+                     product.soldOut
+                       ? 'border-bone/30 bg-bone/10 text-bone/30 cursor-not-allowed'
+                       : addedToCart
+                         ? 'bg-bone text-ink border-bone'
+                         : 'border-blood bg-blood text-bone hover:bg-transparent hover:text-blood'
+                   }`}
+                   whileTap={{ scale: 0.98 }}
+                 >
+                   {product.soldOut ? 'Sold Out' : addedToCart ? '✓ Added to Cart!' : 'Add to Cart'}
+                 </motion.button>
+               </HoverScale>
 
-            {/* Continue Shopping Link */}
-            <Link
-              to="/store"
-              className="block text-center font-mono text-sm text-bone/70 hover:text-bone transition-colors"
-            >
-              ← Back to Store
-            </Link>
-          </div>
+               {/* Continue Shopping Link */}
+               <motion.div
+                 initial={{ opacity: 0 }}
+                 animate={{ opacity: 1 }}
+                 transition={{ delay: 0.6 }}
+               >
+                 <Link
+                   to="/store"
+                   className="block text-center font-mono text-sm text-bone/70 hover:text-bone transition-colors"
+                 >
+                   ← Back to Store
+                 </Link>
+               </motion.div>
+             </div>
+           </ScrollReveal>
         </div>
       </section>
     </div>

@@ -11,14 +11,6 @@ export function InstagramIcon({ className = base }) {
   )
 }
 
-export function BandcampIcon({ className = base }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M2 16.5l5-9h15l-5 9H2z" />
-    </svg>
-  )
-}
-
 export function SpotifyIcon({ className = base }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">

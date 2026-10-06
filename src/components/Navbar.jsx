@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { NAV, LINKS } from '../data/site.js'
-import { InstagramIcon, BandcampIcon, MenuIcon, CloseIcon } from './Icons.jsx'
+import { InstagramIcon, SpotifyIcon, MenuIcon, CloseIcon } from './Icons.jsx'
 import { useCart } from '../context/CartContext.jsx'
 
 export default function Navbar() {
@@ -40,8 +40,8 @@ export default function Navbar() {
           <a href={LINKS.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-blood transition-colors">
             <InstagramIcon />
           </a>
-          <a href={LINKS.bandcamp} target="_blank" rel="noreferrer" aria-label="Bandcamp" className="hover:text-blood transition-colors">
-            <BandcampIcon />
+          <a href={LINKS.spotify} target="_blank" rel="noreferrer" aria-label="Spotify" className="hover:text-blood transition-colors">
+            <SpotifyIcon />
           </a>
           <Link
             to="/cart"

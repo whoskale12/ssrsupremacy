@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { BAND, LINKS, NAV } from '../data/site.js'
-import { InstagramIcon, BandcampIcon, YoutubeIcon } from './Icons.jsx'
+import { InstagramIcon, SpotifyIcon, YoutubeIcon } from './Icons.jsx'
 import Marquee from './Marquee.jsx'
 
 export default function Footer() {
@@ -39,8 +39,8 @@ export default function Footer() {
               <a href={LINKS.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-blood transition-colors">
                 <InstagramIcon className="w-6 h-6" />
               </a>
-              <a href={LINKS.bandcamp} target="_blank" rel="noreferrer" aria-label="Bandcamp" className="hover:text-blood transition-colors">
-                <BandcampIcon className="w-6 h-6" />
+              <a href={LINKS.spotify} target="_blank" rel="noreferrer" aria-label="Spotify" className="hover:text-blood transition-colors">
+                <SpotifyIcon className="w-6 h-6" />
               </a>
               <a href={LINKS.youtube} target="_blank" rel="noreferrer" aria-label="YouTube" className="hover:text-blood transition-colors">
                 <YoutubeIcon className="w-6 h-6" />

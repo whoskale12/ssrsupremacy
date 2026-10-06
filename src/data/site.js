@@ -15,14 +15,11 @@ export const BAND = {
 }
 
 export const LINKS = {
-  bandcamp: 'https://simplefunrecords.bandcamp.com/album/now-i-see-you-now-i-dont',
+  spotify: 'https://open.spotify.com/artist/3CjnpGsxoiyIkl9bqgA7t9?si=QSHOTfluSmuDmgxVRI48ng',
   instagram: 'https://www.instagram.com/ssrsupremacy_',
   youtube: '#', // placeholder
   email: 'mailto:ssrsupremacy@gmail.com', // placeholder
 }
-
-// Bandcamp album id parsed from the embed share code (update with the real id if it changes).
-export const BANDCAMP_ALBUM_ID = '4225026008'
 
 export const NAV = [
   { to: '/', label: 'Home' },

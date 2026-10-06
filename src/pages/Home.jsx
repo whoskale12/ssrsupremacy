@@ -4,7 +4,7 @@ import { MERCH } from '../data/merch.js'
 import Marquee from '../components/Marquee.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
 import MerchCard from '../components/MerchCard.jsx'
-import { InstagramIcon, BandcampIcon } from '../components/Icons.jsx'
+import { InstagramIcon, SpotifyIcon } from '../components/Icons.jsx'
 
 export default function Home() {
   return (
@@ -24,8 +24,8 @@ export default function Home() {
             New record “{BAND.album.title}” — out now on {BAND.label}.
           </p>
           <div className="flex flex-wrap gap-3 mt-7">
-            <a href={LINKS.bandcamp} target="_blank" rel="noreferrer" className="btn-punk flex items-center gap-2">
-              <BandcampIcon className="w-4 h-4" /> Listen Now
+            <a href={LINKS.spotify} target="_blank" rel="noreferrer" className="btn-punk flex items-center gap-2">
+              <SpotifyIcon className="w-4 h-4" /> Listen Now
             </a>
             <Link to="/store" className="btn-ghost">Merch</Link>
             <a href={LINKS.instagram} target="_blank" rel="noreferrer" className="btn-ghost flex items-center gap-2">
@@ -77,7 +77,7 @@ export default function Home() {
             </ul>
             <div className="flex flex-wrap gap-3 mt-7">
               <Link to="/music" className="btn-punk">Play Album</Link>
-              <a href={LINKS.bandcamp} target="_blank" rel="noreferrer" className="btn-ghost">Buy on Bandcamp</a>
+              <a href={LINKS.spotify} target="_blank" rel="noreferrer" className="btn-ghost">Listen on Spotify</a>
             </div>
           </div>
         </div>

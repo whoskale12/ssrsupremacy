@@ -1,6 +1,6 @@
 import { BAND, LINKS } from '../data/site.js'
 import PageHeader from '../components/PageHeader.jsx'
-import { BandcampIcon } from '../components/Icons.jsx'
+import { SpotifyIcon } from '../components/Icons.jsx'
 
 export default function Music() {
   return (
@@ -34,12 +34,12 @@ export default function Music() {
           </ul>
 
           <div className="flex flex-wrap gap-3 mt-8">
-            <a href={LINKS.bandcamp} target="_blank" rel="noreferrer" className="btn-punk flex items-center gap-2">
-              <BandcampIcon className="w-4 h-4" /> Bandcamp
+            <a href={LINKS.spotify} target="_blank" rel="noreferrer" className="btn-punk flex items-center gap-2">
+              <SpotifyIcon className="w-4 h-4" /> Spotify
             </a>
           </div>
           <p className="font-mono text-xs text-bone/40 mt-6">
-            Name your price on Bandcamp — every stream and share helps us keep the amps on.
+            Listen and follow SSR SUPREMACY on Spotify.
           </p>
         </div>
       </section>

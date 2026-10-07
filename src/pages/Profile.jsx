@@ -24,7 +24,7 @@ export default function Profile() {
             </p>
             <p className="font-mono text-sm md:text-base text-bone/80 leading-relaxed mt-4">
               Since day one we've believed in small rooms, loud nights, and songs you can scream back word for word.
-              "{BAND.album.title}" is the first chapter — and we're just getting started.
+              "Shade Of Blue / Vaye" — the next chapter, and we're just getting started.
             </p>
           </div>
         </ScrollReveal>

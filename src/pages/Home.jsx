@@ -86,7 +86,7 @@ export default function Home() {
               back in a crowded room.
             </p>
             <p className="font-mono text-sm md:text-base text-bone/80 mt-4 leading-relaxed">
-              Our debut "{BAND.album.title}" is a short, sharp shot of everything we are.
+              "Shade Of Blue / Vaye" — out now on all DSPs 🎧
             </p>
             <HoverScale scale={1.05}>
               <Link to="/profile" className="btn-ghost mt-7">Meet the Band</Link>
